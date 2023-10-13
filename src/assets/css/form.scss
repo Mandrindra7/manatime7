@@ -1,0 +1,17 @@
+.form {
+  background-color: #fff;
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 5px;
+
+  .title {
+    color: #7e8b9b;
+    text-align: center;
+    font-weight: 600;
+    font-family: Poppins;
+  }
+}

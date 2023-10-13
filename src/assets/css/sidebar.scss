@@ -1,0 +1,79 @@
+.sidebar {
+  .MuiDrawer-paper {
+    background: url("../image/Graphic.svg") no-repeat bottom,
+      linear-gradient(180deg, #094694 0%, #0096ff 134.71%);
+  }
+
+  .header {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 67px;
+    flex-shrink: 0;
+  }
+  .divider {
+    background: #0799ff;
+    background-blend-mode: overlay;
+    height: 2px;
+  }
+
+  .list {
+    background: #0090f5;
+    width: 200px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+    flex-shrink: 0;
+    color: #fff;
+    cursor: pointer;
+    .label {
+      text-align: center;
+      font-family: Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.225px;
+    }
+  }
+  .list-item {
+    background: #094694;
+    width: 200px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2;
+    flex-shrink: 0;
+    color: #fff;
+    cursor: pointer;
+    .label {
+      margin-left: 25px;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.225px;
+    }
+  }
+
+  .collapse {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end !important;
+    align-items: end !important;
+    .active {
+      color: #0090f5;
+    }
+  }
+}
+
+.container {
+  display: flex;
+}

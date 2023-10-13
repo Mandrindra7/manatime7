@@ -1,0 +1,29 @@
+.table {
+  width: 1150px;
+  margin: auto;
+  border-radius: 5px !important;
+  & .open {
+    width: calc(100% - 215px);
+  }
+  .MuiTableCell-root {
+    border: 1px solid #c4c4c4 !important;
+  }
+  .category {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    .RTT {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ff8851;
+    }
+    .conge {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #a851ff;
+    }
+  }
+}
