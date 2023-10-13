@@ -30,7 +30,7 @@ const SideBar = ({ open, handleOpen }: SideBarProps) => {
   const [openCollapse, setOpenCollapse] = React.useState<string | null>(null);
   const [openModule, setOpenModule] = React.useState<string | null>(null);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const handleClick = (label: string) => {
     setOpenCollapse(label);
@@ -80,7 +80,7 @@ const SideBar = ({ open, handleOpen }: SideBarProps) => {
                   <ListItemButton
                     sx={{ pl: 4 }}
                     key={child + index}
-                    className={openModule === child ? "active": ""}
+                    className={openModule === child ? "active" : ""}
                     onClick={() => setOpenModule(child)}
                   >
                     <ListItemText className="label" primary={child} />
@@ -93,7 +93,9 @@ const SideBar = ({ open, handleOpen }: SideBarProps) => {
         ))}
         <Divider />
       </Drawer>
-      {openModule ? <DrawerModule soldes={Solde} close={() => setOpenModule(null)} /> : null}
+      {openModule ? (
+        <DrawerModule soldes={Solde} close={() => setOpenModule(null)} />
+      ) : null}
     </div>
   );
 };

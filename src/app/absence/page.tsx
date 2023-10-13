@@ -42,12 +42,12 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const Page = () => {
-  const [data, setData] = React.useState(abscenceData)
+  const [data, setData] = React.useState(abscenceData);
 
   const removeAbsence = (absence: Absence) => {
-    const res = deleteAbsence(absence)
-    setData(res)
-  }
+    const res = deleteAbsence(absence);
+    setData(res);
+  };
   return (
     <TableContainer>
       <Table className="table" aria-label="customized table">

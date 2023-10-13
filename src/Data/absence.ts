@@ -102,5 +102,5 @@ export const addAbsence = (data: Absence) => {
 export const deleteAbsence = (abscence: Absence) => {
   const index = abscenceData.findIndex((item) => item.user === abscence.user);
   abscenceData.splice(index, 1);
- return abscenceData
+  return abscenceData;
 };

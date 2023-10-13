@@ -14,8 +14,8 @@ import "@/assets/css/drawer-module.scss";
 const DrawerModule: React.FC<any> = ({ soldes, close }) => {
   const router = useRouter();
   const handlePage = () => {
-    close()
-    router.push("/absence")
+    close();
+    router.push("/absence");
   };
   return (
     <div className="drawer-module">
@@ -31,11 +31,7 @@ const DrawerModule: React.FC<any> = ({ soldes, close }) => {
 
       <Grid className="body" container spacing={4} columnGap={1} rowGap={1}>
         {soldes.map((solde: ManaModule, index: string) => (
-          <Grid
-            key={solde.label + index}
-            spacing={1}
-            onClick={handlePage}
-          >
+          <Grid key={solde.label + index} spacing={1} onClick={handlePage}>
             <CardImage icon={solde.icon} label={solde.label} />
           </Grid>
         ))}

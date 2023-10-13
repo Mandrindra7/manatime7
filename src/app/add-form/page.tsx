@@ -38,20 +38,19 @@ const page = () => {
     futur_solde: false,
   });
 
-  const router = useRouter()
+  const router = useRouter();
 
   const handleChange = (e: any) => {
     const _temp: any = { ...form };
-   _temp[e.target.name] = e.target.value;
+    _temp[e.target.name] = e.target.value;
     setForm(_temp);
   };
 
-  const handleDatePicker = ( value: any) => {
-
+  const handleDatePicker = (value: any) => {
     const _temp: Absence = { ...form };
-    _temp.period = value.$y
-    setForm(_temp)
-  }
+    _temp.period = value.$y;
+    setForm(_temp);
+  };
   const isFormValid = () => {
     return (
       form.user &&
@@ -66,20 +65,18 @@ const page = () => {
     console.log(form);
     if (isFormValid()) {
       addAbsence(form);
-      router.push('/absence')
-    }
-    else {
-        const _tempError = {...error}
-        !form.user && (_tempError.user = true)
-        !form.category && (_tempError.category = true)
-        !form.period && (_tempError.period = true)
-        !form.actual_solde && (_tempError.actual_solde = true)
-        !form.taking_solde && (_tempError.taking_solde = true)
-        !form.futur_solde &&( _tempError.futur_solde = true)
+      router.push("/absence");
+    } else {
+      const _tempError = { ...error };
+      !form.user && (_tempError.user = true);
+      !form.category && (_tempError.category = true);
+      !form.period && (_tempError.period = true);
+      !form.actual_solde && (_tempError.actual_solde = true);
+      !form.taking_solde && (_tempError.taking_solde = true);
+      !form.futur_solde && (_tempError.futur_solde = true);
 
-        setError(_tempError)
+      setError(_tempError);
     }
-    
   };
   return (
     <Box className="form">
@@ -125,7 +122,6 @@ const page = () => {
               views={["year"]}
               value={dayjs(form.period)}
               onChange={handleDatePicker}
-
             />
           </DemoContainer>
         </LocalizationProvider>
