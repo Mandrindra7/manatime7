@@ -20,7 +20,7 @@ import { Absence } from "@/Data/type";
 import { useRouter } from "next/navigation";
 import dayjs from "dayjs";
 
-const page = () => {
+const Page: React.FC = () => {
   const [form, setForm] = useState<Absence>({
     user: "",
     category: "",
@@ -172,4 +172,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
