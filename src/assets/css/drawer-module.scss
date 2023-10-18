@@ -10,6 +10,11 @@
 
   padding-top: 118px;
   transition: left 0.3s ease-out;
+  @media screen and (max-width: 1024px) {
+    width: 600px;
+    padding-top: 0 !important;
+
+  }
 
   .head {
     padding-inline: 226px;
@@ -17,13 +22,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 1024px) {
+        width: 200px;
+        height: 30px;
+      }
     }
   }
   .body {
     width: 100%;
+    height: fit-content;
     margin: auto;
     position: relative;
     left: 48px;
     top: 75px;
+
+    @media screen and (max-width: 1024px) {
+      position: absolute;
+      left: 35px;
+      top: 50px;
+    }
   }
 }
